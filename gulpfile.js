@@ -1,10 +1,13 @@
 var gulp = require("gulp");
 var exec = require("child_process").exec;
 
+var srcFiles = ["src/**/*", "css/**/*", "api/**/*", "test/**/*"];
+
 gulp.task("copyHtml", copyHtmlTask);
 gulp.task("copy", copyTask);
 gulp.task("build", ["copy", "copyHtml"], buildTask);
-gulp.task("watch", watchTask);
+gulp.task("watch", watchTestTask);
+gulp.task("watchBuild", watchBuildTask);
 gulp.task("default", ["build"]);
 
 function copyHtmlTask () {
@@ -17,14 +20,22 @@ function copyTask () {
 		.pipe(gulp.dest("dist/"));
 }
 
-function watchTask () {
-	gulp.watch(["src/**/*", "css/**/*"], buildTask);
+function watchBuildTask () {
+	gulp.watch(srcFiles, buildTask);
+}
+
+function watchTestTask () {
+	gulp.watch(srcFiles, testTask);
+}
+
+function testTask () {
+	exec("npm test", consoleOut);
 }
 
 function buildTask () {
-	//exec("npm start", output);
+	exec("npm start", consoleOut);
+}
 
-	function output (err, stdout, stderr) {
-		console.log(stdout);
-	}
+function consoleOut (err, stdout, stderr) {
+	console.log(stdout);
 }

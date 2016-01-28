@@ -1,36 +1,41 @@
 {
-	"name": "reactjs-skeleton",
-	"version": "0.0.1",
-	"description": "React webapp skeleton",
-	"main": "index.html",
-	"scripts": {
-		"test": "test",
-		"prestart": "gulp",
-		"start": "browserify -t [ babelify --presets [ react ] ] src/index.js -o dist/index.js -d",
-		"poststart": "",
-		"serve": "cd dist && python -m SimpleHTTPServer"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/or9/reactjs-skeleton.git"
-	},
-	"keywords": [
-		"test",
-		"base",
-		"react"
+  "name": "reactjs-skeleton",
+  "version": "0.0.1",
+  "description": "React webapp skeleton",
+  "main": "index.html",
+  "scripts": {
+    "test": "mocha --compilers js:babel/register test/index.js",
+    "prestart": "gulp",
+    "start": "browserify -t [ babelify --presets [ react ] ] src/index.js -o dist/index.js -d",
+    "poststart": "",
+    "serve": "cd dist && python -m SimpleHTTPServer",
+    "watch": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/or9/reactjs-skeleton.git"
+  },
+  "keywords": [
+    "test",
+    "base",
+    "react"
   ],
   "author": "durmon",
   "license": "MIT",
   "bugs": {
-	  "url": "https://github.com/or9/reactjs-skeleton/issues"
+    "url": "https://github.com/or9/reactjs-skeleton/issues"
   },
   "homepage": "https://github.com/or9/reactjs-skeleton#readme",
   "devDependencies": {
-	  "babel-preset-react": "^6.3.13",
-	  "babelify": "^7.2.0",
-	  "marked": "^0.3.5",
-	  "react": "^0.14.6",
-	  "react-dom": "^0.14.6",
-	  "gulp": "^3.9.0"
+    "babel-preset-react": "^6.3.13",
+    "babelify": "^7.2.0",
+    "chai": "^3.4.1",
+    "gulp": "^3.9.0",
+    "marked": "^0.3.5",
+    "mocha": "^2.4.4",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "sinon": "^1.17.3",
+    "sinon-chai": "^2.8.0"
   }
 }
