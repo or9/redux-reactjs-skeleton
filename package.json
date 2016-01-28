@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha --compilers js:babel-register test/index.js",
     "prestart": "gulp",
-    "start": "browserify -t [ babelify --presets [ react, es2015 ] ] src/index.js -o dist/index.js -d",
+    "start": "browserify -t [ babelify ] src/index.js -o dist/index.js -d",
     "poststart": "",
     "serve": "cd dist && python -m SimpleHTTPServer",
     "prewatch": "npm test",

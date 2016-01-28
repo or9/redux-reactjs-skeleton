@@ -43,6 +43,6 @@ function renderClass () {
 }
 
 function renderBoxInitialState () {
-	//return { data: [] };
+	return { data: [] };
 }
 
