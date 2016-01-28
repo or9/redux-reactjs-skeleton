@@ -1,5 +1,5 @@
 global.chai = require("chai");
-global.should = global.chai.should;
+global.chai.should();
 global.expect = global.chai.expect;
 
-require("../src/*.spec.js");
+require("../src/MyModule.spec.js");

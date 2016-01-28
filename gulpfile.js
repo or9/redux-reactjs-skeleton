@@ -1,5 +1,5 @@
 var gulp = require("gulp");
-var exec = require("child_process").exec;
+var spawn = require("child_process").spawn;
 
 var srcFiles = ["src/**/*", "css/**/*", "api/**/*", "test/**/*"];
 
@@ -29,13 +29,10 @@ function watchTestTask () {
 }
 
 function testTask () {
-	exec("npm test", consoleOut);
+	var process = spawn("npm", ["test"], { stdio: "inherit" });
 }
 
 function buildTask () {
-	exec("npm start", consoleOut);
+	var process = spawn("npm", ["start"], { stdio: "inherit" });
 }
 
-function consoleOut (err, stdout, stderr) {
-	console.log(stdout);
-}

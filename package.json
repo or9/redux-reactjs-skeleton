@@ -4,11 +4,12 @@
   "description": "React webapp skeleton",
   "main": "index.html",
   "scripts": {
-    "test": "mocha --compilers js:babel/register test/index.js",
+    "test": "mocha --compilers js:babel-register test/index.js",
     "prestart": "gulp",
-    "start": "browserify -t [ babelify --presets [ react ] ] src/index.js -o dist/index.js -d",
+    "start": "browserify -t [ babelify --presets [ react, es2015 ] ] src/index.js -o dist/index.js -d",
     "poststart": "",
     "serve": "cd dist && python -m SimpleHTTPServer",
+    "prewatch": "npm test",
     "watch": "gulp watch"
   },
   "repository": {
@@ -27,6 +28,7 @@
   },
   "homepage": "https://github.com/or9/reactjs-skeleton#readme",
   "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babelify": "^7.2.0",
     "chai": "^3.4.1",
