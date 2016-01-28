@@ -11,4 +11,5 @@ Point your browser to `http://localhost:8000/dist`
 ```
 npm run watch
 ```
+Tests use `chai` `should`. This can be changed in the main test file.
 
