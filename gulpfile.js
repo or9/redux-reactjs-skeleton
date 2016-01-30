@@ -33,6 +33,7 @@ function testTask () {
 }
 
 function buildTask () {
-	var process = spawn("npm", ["start"], { stdio: "inherit" });
+	var process = spawn("gulp", ["copyHtml"], { stdio: "inherit" });
+	var process = spawn("gulp", ["copy"], { stdio: "inherit" });
 }
 
