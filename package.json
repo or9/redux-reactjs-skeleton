@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/or9/reactjs-skeleton.git"
+    "url": "git+https://github.com/or9/redux-reactjs-skeleton.git"
   },
   "keywords": [
     "test",
@@ -24,9 +24,9 @@
   "author": "durmon",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/or9/reactjs-skeleton/issues"
+    "url": "https://github.com/or9/redux-reactjs-skeleton/issues"
   },
-  "homepage": "https://github.com/or9/reactjs-skeleton#readme",
+  "homepage": "https://github.com/or9/redux-reactjs-skeleton#readme",
   "devDependencies": {
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
@@ -39,6 +39,8 @@
     "mocha": "^2.4.4",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
+    "react-redux": "^4.3.0",
+    "redux": "^3.2.1",
     "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0"
   }
